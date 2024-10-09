@@ -13,9 +13,10 @@ function Forum() {
     }, []);
 
     return (
-        <div>
+        <div className="mt-4">
             {messages.map((msg) => (
-                <div key={msg.id}>
+                <div key={msg.id} className="alert alert-primary">
+                    <strong>{msg.username}:</strong>
                     <p>{msg.content}</p>
                 </div>
             ))}
