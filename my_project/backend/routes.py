@@ -30,4 +30,4 @@ def post_message():
 @api.route('/messages', methods=['GET'])
 def get_messages():
     messages = Message.query.all()
-    return jsonify([{"user_id": msg.user_id, "content": msg.content} for msg in messages]), 200
+    return jsonify([{"user_id": msg.user_id, "username": msg.user.username,"content": msg.content} for msg in messages]), 200
